@@ -72,8 +72,8 @@ else:
 
     string = "Detected Disease : " + class_names[np.argmax(predictions)]
     if class_names[np.argmax(predictions)] == 'BrownSpot':
-        st.balloons()
-        st.sidebar.success(string)
+        
+        st.sidebar.warning(string)
         
 
     elif class_names[np.argmax(predictions)] == 'Hispa':
@@ -87,4 +87,5 @@ else:
         st.info("Aviator® Xpro® and Prosaro® are both protective and curative fungicides, unlike some other fungicides which only offer protective properties against stripe rust. They are both registered for the control of stripe rust in Rice.")
 
     elif class_names[np.argmax(predictions)] == 'Healthy':
-         st.sidebar.success(string)
+        st.balloons()
+        st.sidebar.success(string)
