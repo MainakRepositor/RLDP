@@ -72,19 +72,20 @@ else:
 
     string = "Detected Disease : " + class_names[np.argmax(predictions)]
     if class_names[np.argmax(predictions)] == 'BrownSpot':
-        
         st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.markdown("Brown spot disease in rice leaves, caused by the fungus Bipolaris oryzae, can significantly impact crop yield. To address this issue, follow an integrated disease management approach. First, choose disease-resistant rice varieties like CO 39, ADT 37, or IR 64. Implement good agricultural practices such as proper spacing, balanced fertilizer application, and avoiding excessive moisture. For chemical control, consider the following pesticides: 1) Carbendazim (Bavistin), 2) Propiconazole (Tilt), and 3) Mancozeb (Dithane M-45). Rotate these chemicals to prevent resistance buildup. Apply these pesticides at the recommended dosages during the initial stages of disease onset and adhere to safety guidelines. Always consult with local agricultural authorities for the latest recommendations, as pesticide availability and regulations may vary. Integrated management, including cultural and chemical practices, can effectively mitigate brown spot disease and preserve rice crop health.")
         
 
     elif class_names[np.argmax(predictions)] == 'Hispa':
         st.sidebar.warning(string)
         st.markdown("## Remedy")
-        st.info("These include a combination of triazoles + chlorothalonil at Rice stage T1 (1-2 node stage) or triazole + SDHI at Rice stage T2 (last leaf stage). However, new solutions are also available. These are perfectly appropriate for use in a septoria control strategy in combination with a triazole and/or chlorothalonil.")
+        st.info("To combat Hispa disease, a common ailment affecting rice leaves, it is essential to employ integrated pest management strategies to ensure effective control. Begin by practicing good agricultural practices, including maintaining proper field hygiene, avoiding waterlogging, and using disease-resistant rice varieties. Implement cultural controls like crop rotation and intercropping. Biological control methods can involve releasing natural predators of Hispa beetles, such as ladybugs or parasitoid wasps. Chemical control, when necessary, should be a last resort. Use pesticides like Imidacloprid, Thiamethoxam, or Chlorantraniliprole, but only under expert guidance, following recommended dosage and safety precautions. Regular monitoring of the field and weather conditions is crucial to make informed decisions about pesticide applications. Lastly, always promote sustainable farming practices to minimize the impact of Hispa disease and safeguard the environment.")
 
     elif class_names[np.argmax(predictions)] == 'LeafBlast':
         st.sidebar.warning(string)
         st.markdown("## Remedy")
-        st.info("Aviator® Xpro® and Prosaro® are both protective and curative fungicides, unlike some other fungicides which only offer protective properties against stripe rust. They are both registered for the control of stripe rust in Rice.")
+        st.info("Leaf Blast disease in rice leaves, caused by the fungus Pyricularia oryzae, can devastate crop yields. To effectively manage this disease, a multi-pronged approach is recommended. Begin by practicing proper field hygiene, ensuring adequate spacing between plants to improve air circulation and reduce humidity. Utilize resistant rice varieties where possible. Apply organic solutions such as neem oil and copper-based fungicides like Bordeaux mixture as preventive measures. For curative actions, employ chemical fungicides like tricyclazole (e.g., Blastban) or azoxystrobin (e.g., Amistar) following label instructions. Rotate fungicides to reduce the risk of resistance development. Regularly monitor the field for early symptoms and implement these remedies when needed. Remember to adhere to safety guidelines when handling pesticides and consult local agricultural authorities for up-to-date recommendations. Integrated management strategies offer the best results, ultimately safeguarding rice crops from Leaf Blast disease while minimizing environmental impact.")
 
     elif class_names[np.argmax(predictions)] == 'Healthy':
         st.balloons()
